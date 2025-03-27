@@ -1,0 +1,19 @@
+.example-card {
+    max-width: 60%;
+    margin-top: 10%;
+    margin-left: 20%;
+    background-color: azure;
+}
+
+mat-form-field {
+    width: 40%;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+
+button {
+    margin-left: 5%;
+    font-size: larger;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}

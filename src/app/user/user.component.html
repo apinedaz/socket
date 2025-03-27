@@ -1,0 +1,39 @@
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Ingreso de usuarios</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field appearance="outline">
+                <label>Nombre</label>
+                <input matInput type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"> 
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <label>Usuario</label>
+                <input matInput type="text" [(ngModel)]="user" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <label>Contraseña</label>
+                <input matInput type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <label>Telefono</label>
+                <input matInput type="text" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <label>Correo</label>
+                <input matInput type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="primary" (click)="create()">Crear</button>
+        <button mat-icon-button class="button-home" color="primary" (click)="home()">
+            <mat-icon>home</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>
