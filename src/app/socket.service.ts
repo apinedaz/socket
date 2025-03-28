@@ -6,7 +6,7 @@ import { io } from 'socket.io-client';
 })
 export class SocketService 
 {
-  private urlSocket: string = "localhost:3000";
+  private urlSocket: string = "192.168.101.26:3000";
 
   private socket = io(this.urlSocket);
 
