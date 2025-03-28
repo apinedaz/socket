@@ -25,4 +25,9 @@ export class HomeComponent
   {
     this.router.navigate(['create-user']);
   }
+
+  public list()
+  {
+    this.router.navigate(['list-user']);
+  }
 }

@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { ComponentRef, Injectable, ViewRef } from '@angular/core';
 import { io } from 'socket.io-client';
+import { UserListComponent } from './user-list/user-list.component';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,28 @@ export class SocketService
 
   private socket = io(this.urlSocket);
 
-  constructor() 
+  private userListComponent!: UserListComponent;
+
+  constructor()
   {
+    this.socket.on('response',(data) =>
+      {
+        if(this.userListComponent)
+        {
+          this.userListComponent.users(data);
+        }
+      }
+    );
   }
 
-  public prueba()
+  public setUserList(useList: UserListComponent)
   {
-    this.socket.emit('prueba',{});
+    this.userListComponent = useList;
+  }
+
+  public consult()
+  {
+    this.socket.emit('consult',{});
   }
 
   public create(data: any)

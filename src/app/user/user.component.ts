@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { SocketService } from '../socket.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -48,7 +48,6 @@ export class UserComponent
   public create()
   {
     let data ={'name' : this.name, 'user' : this.user, 'password' : this.password, 'phone' : this.phone, 'email' : this.email};
-    //let data =[this.name,this.user,this.password,this.phone,this.email];
     this.socketService.create(data);
   }
 }
